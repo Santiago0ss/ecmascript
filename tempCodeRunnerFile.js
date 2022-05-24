@@ -1,14 +1,13 @@
-class Calculator {
-    constructor() {
-        this.valueA = 0;
-        this.valueB = 0;
+function* helloWorld() {
+    if (true) {
+        yield 'hello, ';
     }
-    sum(valueA, valueB) {
-        this.valueA = valueA;
-        this.valueB = valueB;
-        return this.valueA + this.valueB;
+    if (true) {
+        yield 'world';
     }
-}
+};
 
-const calc = new Calculator();
-console.log(calc.sum(2, 2));
+const generetorHello = helloWorld();
+console.log(generetorHello.next().value);
+console.log(generetorHello.next().value);
+console.log(generetorHello.next().value);
