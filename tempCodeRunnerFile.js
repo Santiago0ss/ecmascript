@@ -1,6 +1,14 @@
-function newFuntion2(name = "santiago", age = "21", contry = "Colombia"){
-    console.log(name, age, contry)
-};
+class Calculator {
+    constructor() {
+        this.valueA = 0;
+        this.valueB = 0;
+    }
+    sum(valueA, valueB) {
+        this.valueA = valueA;
+        this.valueB = valueB;
+        return this.valueA + this.valueB;
+    }
+}
 
-newFuntion2();
-newFuntion2("Ricardo", "23", "MX")
+const calc = new Calculator();
+console.log(calc.sum(2, 2));
